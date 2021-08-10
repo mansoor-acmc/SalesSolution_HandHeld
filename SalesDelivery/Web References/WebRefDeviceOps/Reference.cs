@@ -28,7 +28,7 @@ namespace SalesDelivery.WebRefDeviceOps {
         
         /// <remarks/>
         public DeviceOps() {
-            this.Url = "http://172.17.0.50/HandHeldServicesTest/DeviceOps.svc";
+            this.Url = "http://172.17.0.50/ServicesD365/DeviceOps.svc";
         }
         
         /// <remarks/>

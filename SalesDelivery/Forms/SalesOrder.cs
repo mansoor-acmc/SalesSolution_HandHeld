@@ -602,7 +602,7 @@ namespace SalesDelivery
                     string msg = row.ItemId + Environment.NewLine+ "Grade: "+row.Grade + Environment.NewLine + "--------------------------------" + Environment.NewLine;
                     foreach (InventByGrLocContract loc in row.Locations)
                     {
-                        msg += loc.locationIdField.PadRight(6) + " = " + loc.onHandField.ToString() +" SQM"+ Environment.NewLine;
+                        msg += loc.LocationId.PadRight(6) + " = " + loc.OnHand.ToString() +" SQM"+ Environment.NewLine;
                     }
 
                     MessageBox.Show(msg,"On-hand Inventory");

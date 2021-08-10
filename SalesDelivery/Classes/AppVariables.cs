@@ -16,7 +16,7 @@ namespace SalesDelivery
 
         public static List<WebRefSales.FGLineContract> FGLoadingLines { get; set; }
 
-        public static readonly string VersionNumber = "Version 2.7.7.0";
+        public static readonly string VersionNumber = "Version 2.8.0.0";
         public static readonly string ProjectName = "SaleService";
         public static readonly string NetworkDown = "Network/WiFi is down. Please contact Network administrator.";
     }

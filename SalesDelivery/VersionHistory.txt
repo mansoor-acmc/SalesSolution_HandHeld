@@ -21,3 +21,6 @@ Version 2.7.7.0:
 Add option to auto Pick-Pack and then creates Delivery Note (Packing Slip) from backend (by WCF services).
 Add Packing-slip label on Home screen, Change Pickinglist Font color.
 Change column ordering in the Sales Line grids.
+
+Version 2.8.0.0:
+Upgraded to Dynamics 365 WCF services

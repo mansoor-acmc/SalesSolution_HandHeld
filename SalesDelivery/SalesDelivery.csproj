@@ -173,10 +173,10 @@
     <None Include="Web References\WebRefDeviceOps\DeviceOps.disco" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://172.17.0.50/HandHeldServicesTest/DeviceOps.svc">
+    <WebReferenceUrl Include="http://172.17.0.50/ServicesD365/DeviceOps.svc">
       <UrlBehavior>Static</UrlBehavior>
       <RelPath>Web References\WebRefDeviceOps\</RelPath>
-      <UpdateFromURL>http://172.17.0.50/HandHeldServicesTest/DeviceOps.svc</UpdateFromURL>
+      <UpdateFromURL>http://172.17.0.50/ServicesD365/DeviceOps.svc</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -186,10 +186,10 @@
       <CachedSettingsPropName>
       </CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="http://172.17.0.50/HandHeldServicesTest/SalesService.svc">
+    <WebReferenceUrl Include="http://172.17.0.50/ServicesD365/SalesService.svc">
       <UrlBehavior>Static</UrlBehavior>
       <RelPath>Web References\WebRefSales\</RelPath>
-      <UpdateFromURL>http://172.17.0.50/HandHeldServicesTest/SalesService.svc</UpdateFromURL>
+      <UpdateFromURL>http://172.17.0.50/ServicesD365/SalesService.svc</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
@@ -236,6 +236,7 @@
     <None Include="Web References\WebRefSales\SalesService3.xsd" />
     <None Include="Web References\WebRefSales\SalesService4.xsd" />
     <None Include="Web References\WebRefSales\SalesService5.xsd" />
+    <None Include="Web References\WebRefSales\SalesService6.xsd" />
     <None Include="Web References\WebRefSales\SalesTable.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>

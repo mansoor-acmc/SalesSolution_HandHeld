@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Results>
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://172.17.0.50/HandHeldServicesTest/SalesService.svc?xsd=xsd3" filename="SalesService.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://172.17.0.50/HandHeldServicesTest/SalesService.svc?xsd=xsd2" filename="SalesService0.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://172.17.0.50/HandHeldServicesTest/SalesService.svc?xsd=xsd1" filename="SalesService1.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://172.17.0.50/HandHeldServicesTest/SalesService.svc?xsd=xsd0" filename="SalesService2.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://172.17.0.50/HandHeldServicesTest/SalesService.svc?xsd=xsd6" filename="SalesService3.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://172.17.0.50/HandHeldServicesTest/SalesService.svc?xsd=xsd5" filename="SalesService4.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://172.17.0.50/HandHeldServicesTest/SalesService.svc?xsd=xsd4" filename="SalesService5.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://172.17.0.50/HandHeldServicesTest/SalesService.svc?wsdl" filename="SalesService.wsdl" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://172.17.0.50/HandHeldServicesTest/SalesService.svc?disco" filename="SalesService.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://172.17.0.50/ServicesD365/SalesService.svc?xsd=xsd2" filename="SalesService.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://172.17.0.50/ServicesD365/SalesService.svc?xsd=xsd3" filename="SalesService0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://172.17.0.50/ServicesD365/SalesService.svc?xsd=xsd0" filename="SalesService1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://172.17.0.50/ServicesD365/SalesService.svc?xsd=xsd1" filename="SalesService2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://172.17.0.50/ServicesD365/SalesService.svc?xsd=xsd6" filename="SalesService3.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://172.17.0.50/ServicesD365/SalesService.svc?xsd=xsd7" filename="SalesService4.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://172.17.0.50/ServicesD365/SalesService.svc?xsd=xsd4" filename="SalesService5.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://172.17.0.50/ServicesD365/SalesService.svc?xsd=xsd5" filename="SalesService6.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://172.17.0.50/ServicesD365/SalesService.svc?disco" filename="SalesService.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://172.17.0.50/ServicesD365/SalesService.svc?wsdl" filename="SalesService.wsdl" />
   </Results>
 </DiscoveryClientResultsFile>

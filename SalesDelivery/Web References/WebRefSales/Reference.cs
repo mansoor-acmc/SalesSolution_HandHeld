@@ -24,13 +24,20 @@ namespace SalesDelivery.WebRefSales {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="BasicHttpBinding_ISalesService", Namespace="http://tempuri.org/")]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Delegate))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(XppObjectBase))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Fault))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Infolog))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CallContext))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProxyBase))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(object[]))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SalesTableContract[]))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LookupContract[]))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PLNotDeliveredContract[]))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SalesLine[]))]
     public partial class SalesService : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
         /// <remarks/>
         public SalesService() {
-            this.Url = "http://172.17.0.50/HandHeldServicesTest/SalesService.svc";
+            this.Url = "http://172.17.0.50/ServicesD365/SalesService.svc";
         }
         
         /// <remarks/>
@@ -162,7 +169,7 @@ namespace SalesDelivery.WebRefSales {
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ISalesService/CheckPalletAvailableMulti", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
         [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/SyncServices")]
-        public SalesLine[] CheckPalletAvailableMulti([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string salesId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string itemId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string configId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pickingId, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")] PalletItemContract[] pallets, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string userName, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string device, long lineRecId, [System.Xml.Serialization.XmlIgnoreAttribute()] bool lineRecIdSpecified) {
+        public SalesLine[] CheckPalletAvailableMulti([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string salesId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string itemId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string configId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pickingId, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")] PalletItemContract[] pallets, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string userName, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string device, long lineRecId, [System.Xml.Serialization.XmlIgnoreAttribute()] bool lineRecIdSpecified) {
             object[] results = this.Invoke("CheckPalletAvailableMulti", new object[] {
                         salesId,
                         itemId,
@@ -297,7 +304,7 @@ namespace SalesDelivery.WebRefSales {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ISalesService/CustomersDeliveryByQty", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
         public CustomerDeliveryContract[] CustomersDeliveryByQty(System.DateTime startDate, [System.Xml.Serialization.XmlIgnoreAttribute()] bool startDateSpecified, System.DateTime endDate, [System.Xml.Serialization.XmlIgnoreAttribute()] bool endDateSpecified) {
             object[] results = this.Invoke("CustomersDeliveryByQty", new object[] {
                         startDate,
@@ -325,7 +332,7 @@ namespace SalesDelivery.WebRefSales {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ISalesService/CustomersDeliveryByTrucks", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
         public CustomerDeliveryContract[] CustomersDeliveryByTrucks(System.DateTime startDate, [System.Xml.Serialization.XmlIgnoreAttribute()] bool startDateSpecified, System.DateTime endDate, [System.Xml.Serialization.XmlIgnoreAttribute()] bool endDateSpecified) {
             object[] results = this.Invoke("CustomersDeliveryByTrucks", new object[] {
                         startDate,
@@ -419,7 +426,7 @@ namespace SalesDelivery.WebRefSales {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ISalesService/GetFGLines", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
         public FGLineContract[] GetFGLines() {
             object[] results = this.Invoke("GetFGLines", new object[0]);
             return ((FGLineContract[])(results[0]));
@@ -439,7 +446,7 @@ namespace SalesDelivery.WebRefSales {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/ISalesService/GetDeliveries", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
         public FGDeliveryContract[] GetDeliveries(System.DateTime dateSearch, [System.Xml.Serialization.XmlIgnoreAttribute()] bool dateSearchSpecified) {
             object[] results = this.Invoke("GetDeliveries", new object[] {
                         dateSearch,
@@ -981,7 +988,7 @@ namespace SalesDelivery.WebRefSales {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
         public InventByGrLocContract[] Locations {
             get {
                 return this.locationsField;
@@ -1269,84 +1276,139 @@ namespace SalesDelivery.WebRefSales {
     /// <remarks/>
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
     public partial class InventByGrLocContract : XppObjectBase {
         
-        private string gradeFieldField;
+        private string gradeField;
         
-        private string locationIdFieldField;
+        private string locationIdField;
         
-        private decimal onHandFieldField;
+        private decimal onHandField;
         
-        private bool onHandFieldSpecified1Field;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string gradeField {
-            get {
-                return this.gradeFieldField;
-            }
-            set {
-                this.gradeFieldField = value;
-            }
-        }
+        private bool onHandFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string locationIdField {
+        public string Grade {
             get {
-                return this.locationIdFieldField;
+                return this.gradeField;
             }
             set {
-                this.locationIdFieldField = value;
+                this.gradeField = value;
             }
         }
         
         /// <remarks/>
-        public decimal onHandField {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string LocationId {
             get {
-                return this.onHandFieldField;
+                return this.locationIdField;
             }
             set {
-                this.onHandFieldField = value;
+                this.locationIdField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("onHandFieldSpecified")]
-        public bool onHandFieldSpecified1 {
+        public decimal OnHand {
             get {
-                return this.onHandFieldSpecified1Field;
+                return this.onHandField;
             }
             set {
-                this.onHandFieldSpecified1Field = value;
+                this.onHandField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool OnHandSpecified {
+            get {
+                return this.onHandFieldSpecified;
+            }
+            set {
+                this.onHandFieldSpecified = value;
             }
         }
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PickHistoryContract))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PalletContract))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FGDeliveryLineContract))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FGDeliveryContract))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PLNotDeliveredContract))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(FGLineContract))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LookupContract))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FGDeliveryContract))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SalesLineContract))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SalesTableContract))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomerDeliveryContract))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(PalletItemContract))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(InventByGrLocContract))]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")]
-    public partial class XppObjectBase {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp")]
+    public partial class XppObjectBase : ProxyBase {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(XppObjectBase))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PickHistoryContract))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PalletContract))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PLNotDeliveredContract))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FGLineContract))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LookupContract))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FGDeliveryContract))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SalesLineContract))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SalesTableContract))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomerDeliveryContract))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PalletItemContract))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InventByGrLocContract))]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.AX.KernelInterop")]
+    public partial class ProxyBase {
+    }
+    
+    /// <remarks/>
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+    public partial class Fault {
         
-        private PropertyChangedEventHandler propertyChangedField;
+        private string exceptionMessageField;
+        
+        private string exceptionTypeField;
+        
+        private string requestIdField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public PropertyChangedEventHandler PropertyChanged {
+        public string ExceptionMessage {
             get {
-                return this.propertyChangedField;
+                return this.exceptionMessageField;
             }
             set {
-                this.propertyChangedField = value;
+                this.exceptionMessageField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string ExceptionType {
+            get {
+                return this.exceptionTypeField;
+            }
+            set {
+                this.exceptionTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string RequestId {
+            get {
+                return this.requestIdField;
+            }
+            set {
+                this.requestIdField = value;
             }
         }
     }
@@ -1354,49 +1416,137 @@ namespace SalesDelivery.WebRefSales {
     /// <remarks/>
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System.ComponentModel")]
-    public partial class PropertyChangedEventHandler : MulticastDelegate {
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PropertyChangedEventHandler))]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System")]
-    public partial class MulticastDelegate : Delegate {
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MulticastDelegate))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PropertyChangedEventHandler))]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/System")]
-    public partial class Delegate {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+    public partial class InfologEntry {
         
-        private System.Xml.XmlElement[] anyField;
+        private string messageField;
         
-        private System.Xml.XmlQualifiedName factoryTypeField;
+        private InfologType typeField;
+        
+        private bool typeFieldSpecified;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAnyElementAttribute()]
-        public System.Xml.XmlElement[] Any {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Message {
             get {
-                return this.anyField;
+                return this.messageField;
             }
             set {
-                this.anyField = value;
+                this.messageField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(Form=System.Xml.Schema.XmlSchemaForm.Qualified, Namespace="http://schemas.microsoft.com/2003/10/Serialization/")]
-        public System.Xml.XmlQualifiedName FactoryType {
+        public InfologType Type {
             get {
-                return this.factoryTypeField;
+                return this.typeField;
             }
             set {
-                this.factoryTypeField = value;
+                this.typeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool TypeSpecified {
+            get {
+                return this.typeFieldSpecified;
+            }
+            set {
+                this.typeFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+    public enum InfologType {
+        
+        /// <remarks/>
+        Info,
+        
+        /// <remarks/>
+        Warning,
+        
+        /// <remarks/>
+        Error,
+    }
+    
+    /// <remarks/>
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+    public partial class Infolog {
+        
+        private InfologEntry[] entriesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        public InfologEntry[] Entries {
+            get {
+                return this.entriesField;
+            }
+            set {
+                this.entriesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.microsoft.com/dynamics/2013/01/datacontracts")]
+    public partial class CallContext {
+        
+        private string companyField;
+        
+        private string languageField;
+        
+        private string messageIdField;
+        
+        private string partitionKeyField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Company {
+            get {
+                return this.companyField;
+            }
+            set {
+                this.companyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Language {
+            get {
+                return this.languageField;
+            }
+            set {
+                this.languageField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string MessageId {
+            get {
+                return this.messageIdField;
+            }
+            set {
+                this.messageIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string PartitionKey {
+            get {
+                return this.partitionKeyField;
+            }
+            set {
+                this.partitionKeyField = value;
             }
         }
     }
@@ -1450,122 +1600,1272 @@ namespace SalesDelivery.WebRefSales {
     /// <remarks/>
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    public partial class SalesTableContract : XppObjectBase {
+        
+        private string customerIdField;
+        
+        private string customerNameField;
+        
+        private System.DateTime deliveryDateField;
+        
+        private bool deliveryDateFieldSpecified;
+        
+        private string deliveryModeField;
+        
+        private string deliveryNameField;
+        
+        private string driverNameField;
+        
+        private NoYes halfPalletField;
+        
+        private bool halfPalletFieldSpecified;
+        
+        private string packingSlipField;
+        
+        private string pickingIdField;
+        
+        private string salesIdField;
+        
+        private SalesLineContract[] salesLinesField;
+        
+        private string salesNameField;
+        
+        private string salesStatusField;
+        
+        private string salesTypeField;
+        
+        private NoYes sameConfigurationField;
+        
+        private bool sameConfigurationFieldSpecified;
+        
+        private System.DateTime startLoadField;
+        
+        private bool startLoadFieldSpecified;
+        
+        private System.DateTime stopLoadField;
+        
+        private bool stopLoadFieldSpecified;
+        
+        private int truckLoadLineField;
+        
+        private bool truckLoadLineFieldSpecified;
+        
+        private string truckPlateField;
+        
+        private string truckTicketField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string CustomerId {
+            get {
+                return this.customerIdField;
+            }
+            set {
+                this.customerIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string CustomerName {
+            get {
+                return this.customerNameField;
+            }
+            set {
+                this.customerNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime DeliveryDate {
+            get {
+                return this.deliveryDateField;
+            }
+            set {
+                this.deliveryDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DeliveryDateSpecified {
+            get {
+                return this.deliveryDateFieldSpecified;
+            }
+            set {
+                this.deliveryDateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string DeliveryMode {
+            get {
+                return this.deliveryModeField;
+            }
+            set {
+                this.deliveryModeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string DeliveryName {
+            get {
+                return this.deliveryNameField;
+            }
+            set {
+                this.deliveryNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string DriverName {
+            get {
+                return this.driverNameField;
+            }
+            set {
+                this.driverNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public NoYes HalfPallet {
+            get {
+                return this.halfPalletField;
+            }
+            set {
+                this.halfPalletField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool HalfPalletSpecified {
+            get {
+                return this.halfPalletFieldSpecified;
+            }
+            set {
+                this.halfPalletFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string PackingSlip {
+            get {
+                return this.packingSlipField;
+            }
+            set {
+                this.packingSlipField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string PickingId {
+            get {
+                return this.pickingIdField;
+            }
+            set {
+                this.pickingIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string SalesId {
+            get {
+                return this.salesIdField;
+            }
+            set {
+                this.salesIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        public SalesLineContract[] SalesLines {
+            get {
+                return this.salesLinesField;
+            }
+            set {
+                this.salesLinesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string SalesName {
+            get {
+                return this.salesNameField;
+            }
+            set {
+                this.salesNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string SalesStatus {
+            get {
+                return this.salesStatusField;
+            }
+            set {
+                this.salesStatusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string SalesType {
+            get {
+                return this.salesTypeField;
+            }
+            set {
+                this.salesTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public NoYes SameConfiguration {
+            get {
+                return this.sameConfigurationField;
+            }
+            set {
+                this.sameConfigurationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SameConfigurationSpecified {
+            get {
+                return this.sameConfigurationFieldSpecified;
+            }
+            set {
+                this.sameConfigurationFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime StartLoad {
+            get {
+                return this.startLoadField;
+            }
+            set {
+                this.startLoadField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool StartLoadSpecified {
+            get {
+                return this.startLoadFieldSpecified;
+            }
+            set {
+                this.startLoadFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime StopLoad {
+            get {
+                return this.stopLoadField;
+            }
+            set {
+                this.stopLoadField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool StopLoadSpecified {
+            get {
+                return this.stopLoadFieldSpecified;
+            }
+            set {
+                this.stopLoadFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int TruckLoadLine {
+            get {
+                return this.truckLoadLineField;
+            }
+            set {
+                this.truckLoadLineField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool TruckLoadLineSpecified {
+            get {
+                return this.truckLoadLineFieldSpecified;
+            }
+            set {
+                this.truckLoadLineFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string TruckPlate {
+            get {
+                return this.truckPlateField;
+            }
+            set {
+                this.truckPlateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string TruckTicket {
+            get {
+                return this.truckTicketField;
+            }
+            set {
+                this.truckTicketField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Microsoft.Dynamics.Ax.Xpp")]
+    public enum NoYes {
+        
+        /// <remarks/>
+        No,
+        
+        /// <remarks/>
+        Yes,
+    }
+    
+    /// <remarks/>
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    public partial class SalesLineContract : XppObjectBase {
+        
+        private bool exclusiveHalfPalletField;
+        
+        private bool exclusiveHalfPalletFieldSpecified;
+        
+        private string gradeField;
+        
+        private string inventTransIDField;
+        
+        private bool isHalfPalletField;
+        
+        private bool isHalfPalletFieldSpecified;
+        
+        private string itemIdField;
+        
+        private long lineRecIdField;
+        
+        private bool lineRecIdFieldSpecified;
+        
+        private InventByGrLocContract[] locationsField;
+        
+        private string nameField;
+        
+        private string pickingIdField;
+        
+        private string remarksField;
+        
+        private string salesIdField;
+        
+        private decimal salesQtyField;
+        
+        private bool salesQtyFieldSpecified;
+        
+        private decimal salesQtyBoxField;
+        
+        private bool salesQtyBoxFieldSpecified;
+        
+        private decimal salesQtyPalletField;
+        
+        private bool salesQtyPalletFieldSpecified;
+        
+        private decimal salesQtySQMField;
+        
+        private bool salesQtySQMFieldSpecified;
+        
+        private decimal salesQtySQMRemainingField;
+        
+        private bool salesQtySQMRemainingFieldSpecified;
+        
+        private decimal salesQtySQMReservedField;
+        
+        private bool salesQtySQMReservedFieldSpecified;
+        
+        private string salesUnitField;
+        
+        private string serialField;
+        
+        private string shadeField;
+        
+        private string siteField;
+        
+        private string sizeField;
+        
+        private PalletStatus updateStatusField;
+        
+        private bool updateStatusFieldSpecified;
+        
+        private string updatedByField;
+        
+        private System.DateTime updatedDateField;
+        
+        private bool updatedDateFieldSpecified;
+        
+        private string warehouseField;
+        
+        private string wLocationIdField;
+        
+        /// <remarks/>
+        public bool ExclusiveHalfPallet {
+            get {
+                return this.exclusiveHalfPalletField;
+            }
+            set {
+                this.exclusiveHalfPalletField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ExclusiveHalfPalletSpecified {
+            get {
+                return this.exclusiveHalfPalletFieldSpecified;
+            }
+            set {
+                this.exclusiveHalfPalletFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Grade {
+            get {
+                return this.gradeField;
+            }
+            set {
+                this.gradeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string InventTransID {
+            get {
+                return this.inventTransIDField;
+            }
+            set {
+                this.inventTransIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool IsHalfPallet {
+            get {
+                return this.isHalfPalletField;
+            }
+            set {
+                this.isHalfPalletField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool IsHalfPalletSpecified {
+            get {
+                return this.isHalfPalletFieldSpecified;
+            }
+            set {
+                this.isHalfPalletFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string ItemId {
+            get {
+                return this.itemIdField;
+            }
+            set {
+                this.itemIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public long LineRecId {
+            get {
+                return this.lineRecIdField;
+            }
+            set {
+                this.lineRecIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool LineRecIdSpecified {
+            get {
+                return this.lineRecIdFieldSpecified;
+            }
+            set {
+                this.lineRecIdFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        public InventByGrLocContract[] Locations {
+            get {
+                return this.locationsField;
+            }
+            set {
+                this.locationsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string PickingId {
+            get {
+                return this.pickingIdField;
+            }
+            set {
+                this.pickingIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Remarks {
+            get {
+                return this.remarksField;
+            }
+            set {
+                this.remarksField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string SalesId {
+            get {
+                return this.salesIdField;
+            }
+            set {
+                this.salesIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal SalesQty {
+            get {
+                return this.salesQtyField;
+            }
+            set {
+                this.salesQtyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SalesQtySpecified {
+            get {
+                return this.salesQtyFieldSpecified;
+            }
+            set {
+                this.salesQtyFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal SalesQtyBox {
+            get {
+                return this.salesQtyBoxField;
+            }
+            set {
+                this.salesQtyBoxField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SalesQtyBoxSpecified {
+            get {
+                return this.salesQtyBoxFieldSpecified;
+            }
+            set {
+                this.salesQtyBoxFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal SalesQtyPallet {
+            get {
+                return this.salesQtyPalletField;
+            }
+            set {
+                this.salesQtyPalletField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SalesQtyPalletSpecified {
+            get {
+                return this.salesQtyPalletFieldSpecified;
+            }
+            set {
+                this.salesQtyPalletFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal SalesQtySQM {
+            get {
+                return this.salesQtySQMField;
+            }
+            set {
+                this.salesQtySQMField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SalesQtySQMSpecified {
+            get {
+                return this.salesQtySQMFieldSpecified;
+            }
+            set {
+                this.salesQtySQMFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal SalesQtySQMRemaining {
+            get {
+                return this.salesQtySQMRemainingField;
+            }
+            set {
+                this.salesQtySQMRemainingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SalesQtySQMRemainingSpecified {
+            get {
+                return this.salesQtySQMRemainingFieldSpecified;
+            }
+            set {
+                this.salesQtySQMRemainingFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal SalesQtySQMReserved {
+            get {
+                return this.salesQtySQMReservedField;
+            }
+            set {
+                this.salesQtySQMReservedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SalesQtySQMReservedSpecified {
+            get {
+                return this.salesQtySQMReservedFieldSpecified;
+            }
+            set {
+                this.salesQtySQMReservedFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string SalesUnit {
+            get {
+                return this.salesUnitField;
+            }
+            set {
+                this.salesUnitField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Serial {
+            get {
+                return this.serialField;
+            }
+            set {
+                this.serialField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Shade {
+            get {
+                return this.shadeField;
+            }
+            set {
+                this.shadeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Site {
+            get {
+                return this.siteField;
+            }
+            set {
+                this.siteField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Size {
+            get {
+                return this.sizeField;
+            }
+            set {
+                this.sizeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public PalletStatus UpdateStatus {
+            get {
+                return this.updateStatusField;
+            }
+            set {
+                this.updateStatusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool UpdateStatusSpecified {
+            get {
+                return this.updateStatusFieldSpecified;
+            }
+            set {
+                this.updateStatusFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string UpdatedBy {
+            get {
+                return this.updatedByField;
+            }
+            set {
+                this.updatedByField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime UpdatedDate {
+            get {
+                return this.updatedDateField;
+            }
+            set {
+                this.updatedDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool UpdatedDateSpecified {
+            get {
+                return this.updatedDateFieldSpecified;
+            }
+            set {
+                this.updatedDateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Warehouse {
+            get {
+                return this.warehouseField;
+            }
+            set {
+                this.warehouseField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string wLocationId {
+            get {
+                return this.wLocationIdField;
+            }
+            set {
+                this.wLocationIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    public enum PalletStatus {
+        
+        /// <remarks/>
+        Search,
+        
+        /// <remarks/>
+        Remove,
+        
+        /// <remarks/>
+        Reserve,
+        
+        /// <remarks/>
+        UnReserve,
+        
+        /// <remarks/>
+        PickingList,
+    }
+    
+    /// <remarks/>
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    public partial class LookupContract : XppObjectBase {
+        
+        private int lookupIdField;
+        
+        private bool lookupIdFieldSpecified;
+        
+        private string lookupStringField;
+        
+        /// <remarks/>
+        public int LookupId {
+            get {
+                return this.lookupIdField;
+            }
+            set {
+                this.lookupIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool LookupIdSpecified {
+            get {
+                return this.lookupIdFieldSpecified;
+            }
+            set {
+                this.lookupIdFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string LookupString {
+            get {
+                return this.lookupStringField;
+            }
+            set {
+                this.lookupStringField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    public partial class PLNotDeliveredContract : XppObjectBase {
+        
+        private string customerAccountField;
+        
+        private System.DateTime deliveryDateField;
+        
+        private bool deliveryDateFieldSpecified;
+        
+        private string gradeField;
+        
+        private string itemNumberField;
+        
+        private string pickingIdField;
+        
+        private string quantityInPalletsField;
+        
+        private string quantityInSQMField;
+        
+        private string salesIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string CustomerAccount {
+            get {
+                return this.customerAccountField;
+            }
+            set {
+                this.customerAccountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime DeliveryDate {
+            get {
+                return this.deliveryDateField;
+            }
+            set {
+                this.deliveryDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DeliveryDateSpecified {
+            get {
+                return this.deliveryDateFieldSpecified;
+            }
+            set {
+                this.deliveryDateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Grade {
+            get {
+                return this.gradeField;
+            }
+            set {
+                this.gradeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string ItemNumber {
+            get {
+                return this.itemNumberField;
+            }
+            set {
+                this.itemNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string PickingId {
+            get {
+                return this.pickingIdField;
+            }
+            set {
+                this.pickingIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string QuantityInPallets {
+            get {
+                return this.quantityInPalletsField;
+            }
+            set {
+                this.quantityInPalletsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string QuantityInSQM {
+            get {
+                return this.quantityInSQMField;
+            }
+            set {
+                this.quantityInSQMField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string SalesId {
+            get {
+                return this.salesIdField;
+            }
+            set {
+                this.salesIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    public partial class PickHistoryContract : XppObjectBase {
+        
+        private string deviceNameField;
+        
+        private string palletNoField;
+        
+        private string pickingIdField;
+        
+        private string remarksField;
+        
+        private PalletStatus updateStatusField;
+        
+        private bool updateStatusFieldSpecified;
+        
+        private string updatedByUserField;
+        
+        private System.DateTime updatedDateTimeField;
+        
+        private bool updatedDateTimeFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string DeviceName {
+            get {
+                return this.deviceNameField;
+            }
+            set {
+                this.deviceNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string PalletNo {
+            get {
+                return this.palletNoField;
+            }
+            set {
+                this.palletNoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string PickingId {
+            get {
+                return this.pickingIdField;
+            }
+            set {
+                this.pickingIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Remarks {
+            get {
+                return this.remarksField;
+            }
+            set {
+                this.remarksField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public PalletStatus UpdateStatus {
+            get {
+                return this.updateStatusField;
+            }
+            set {
+                this.updateStatusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool UpdateStatusSpecified {
+            get {
+                return this.updateStatusFieldSpecified;
+            }
+            set {
+                this.updateStatusFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string UpdatedByUser {
+            get {
+                return this.updatedByUserField;
+            }
+            set {
+                this.updatedByUserField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime UpdatedDateTime {
+            get {
+                return this.updatedDateTimeField;
+            }
+            set {
+                this.updatedDateTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool UpdatedDateTimeSpecified {
+            get {
+                return this.updatedDateTimeFieldSpecified;
+            }
+            set {
+                this.updatedDateTimeFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
     public partial class PalletContract : XppObjectBase {
         
-        private string gradeFieldField;
+        private string gradeField;
         
-        private string itemIdFieldField;
+        private string itemIdField;
         
-        private string nameFieldField;
+        private string nameField;
         
-        private decimal salesQtyFieldField;
+        private decimal salesQtyField;
         
-        private bool salesQtyFieldSpecified1Field;
+        private bool salesQtyFieldSpecified;
         
-        private string serialFieldField;
+        private string serialField;
         
-        private string shadeFieldField;
+        private string shadeField;
         
-        private string sizeFieldField;
+        private string sizeField;
         
-        private string warehouseLocationFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string gradeField {
-            get {
-                return this.gradeFieldField;
-            }
-            set {
-                this.gradeFieldField = value;
-            }
-        }
+        private string warehouseLocationField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string itemIdField {
+        public string Grade {
             get {
-                return this.itemIdFieldField;
+                return this.gradeField;
             }
             set {
-                this.itemIdFieldField = value;
+                this.gradeField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string nameField {
+        public string ItemId {
             get {
-                return this.nameFieldField;
+                return this.itemIdField;
             }
             set {
-                this.nameFieldField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public decimal salesQtyField {
-            get {
-                return this.salesQtyFieldField;
-            }
-            set {
-                this.salesQtyFieldField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("salesQtyFieldSpecified")]
-        public bool salesQtyFieldSpecified1 {
-            get {
-                return this.salesQtyFieldSpecified1Field;
-            }
-            set {
-                this.salesQtyFieldSpecified1Field = value;
+                this.itemIdField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string serialField {
+        public string Name {
             get {
-                return this.serialFieldField;
+                return this.nameField;
             }
             set {
-                this.serialFieldField = value;
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal SalesQty {
+            get {
+                return this.salesQtyField;
+            }
+            set {
+                this.salesQtyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SalesQtySpecified {
+            get {
+                return this.salesQtyFieldSpecified;
+            }
+            set {
+                this.salesQtyFieldSpecified = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string shadeField {
+        public string Serial {
             get {
-                return this.shadeFieldField;
+                return this.serialField;
             }
             set {
-                this.shadeFieldField = value;
+                this.serialField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string sizeField {
+        public string Shade {
             get {
-                return this.sizeFieldField;
+                return this.shadeField;
             }
             set {
-                this.sizeFieldField = value;
+                this.shadeField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string warehouseLocationField {
+        public string Size {
             get {
-                return this.warehouseLocationFieldField;
+                return this.sizeField;
             }
             set {
-                this.warehouseLocationFieldField = value;
+                this.sizeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string WarehouseLocation {
+            get {
+                return this.warehouseLocationField;
+            }
+            set {
+                this.warehouseLocationField = value;
             }
         }
     }
@@ -1573,349 +2873,69 @@ namespace SalesDelivery.WebRefSales {
     /// <remarks/>
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")]
-    public partial class FGDeliveryLineContract : XppObjectBase {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
+    public partial class FGLineContract : XppObjectBase {
         
-        private string gradeFieldField;
+        private string fGLineNameField;
         
-        private string itemIdFieldField;
+        private int fGLineNumberField;
         
-        private string nameFieldField;
+        private bool fGLineNumberFieldSpecified;
         
-        private PalletContract[] palletsFieldField;
+        private int onGateNumField;
         
-        private decimal reservedPercentFieldField;
-        
-        private bool reservedPercentFieldSpecified1Field;
-        
-        private decimal reservedQtyFieldField;
-        
-        private bool reservedQtyFieldSpecified1Field;
-        
-        private string salesIdFieldField;
-        
-        private decimal salesQtyBoxFieldField;
-        
-        private bool salesQtyBoxFieldSpecified1Field;
-        
-        private decimal salesQtyFieldField;
-        
-        private bool salesQtyFieldSpecified1Field;
-        
-        private decimal salesQtyPalletFieldField;
-        
-        private bool salesQtyPalletFieldSpecified1Field;
-        
-        private decimal salesQtySQMFieldField;
-        
-        private bool salesQtySQMFieldSpecified1Field;
-        
-        private decimal salesQtySQMRemainingFieldField;
-        
-        private bool salesQtySQMRemainingFieldSpecified1Field;
-        
-        private decimal salesQtySQMReservedFieldField;
-        
-        private bool salesQtySQMReservedFieldSpecified1Field;
-        
-        private string salesUnitFieldField;
-        
-        private string serialFieldField;
-        
-        private string shadeFieldField;
-        
-        private string sizeFieldField;
-        
-        private string wLocationIdFieldField;
-        
-        private string warehouseFieldField;
+        private bool onGateNumFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string gradeField {
+        public string FGLineName {
             get {
-                return this.gradeFieldField;
+                return this.fGLineNameField;
             }
             set {
-                this.gradeFieldField = value;
+                this.fGLineNameField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string itemIdField {
+        public int FGLineNumber {
             get {
-                return this.itemIdFieldField;
+                return this.fGLineNumberField;
             }
             set {
-                this.itemIdFieldField = value;
+                this.fGLineNumberField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string nameField {
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool FGLineNumberSpecified {
             get {
-                return this.nameFieldField;
+                return this.fGLineNumberFieldSpecified;
             }
             set {
-                this.nameFieldField = value;
+                this.fGLineNumberFieldSpecified = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        public PalletContract[] palletsField {
+        public int OnGateNum {
             get {
-                return this.palletsFieldField;
+                return this.onGateNumField;
             }
             set {
-                this.palletsFieldField = value;
+                this.onGateNumField = value;
             }
         }
         
         /// <remarks/>
-        public decimal reservedPercentField {
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool OnGateNumSpecified {
             get {
-                return this.reservedPercentFieldField;
+                return this.onGateNumFieldSpecified;
             }
             set {
-                this.reservedPercentFieldField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("reservedPercentFieldSpecified")]
-        public bool reservedPercentFieldSpecified1 {
-            get {
-                return this.reservedPercentFieldSpecified1Field;
-            }
-            set {
-                this.reservedPercentFieldSpecified1Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        public decimal reservedQtyField {
-            get {
-                return this.reservedQtyFieldField;
-            }
-            set {
-                this.reservedQtyFieldField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("reservedQtyFieldSpecified")]
-        public bool reservedQtyFieldSpecified1 {
-            get {
-                return this.reservedQtyFieldSpecified1Field;
-            }
-            set {
-                this.reservedQtyFieldSpecified1Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string salesIdField {
-            get {
-                return this.salesIdFieldField;
-            }
-            set {
-                this.salesIdFieldField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public decimal salesQtyBoxField {
-            get {
-                return this.salesQtyBoxFieldField;
-            }
-            set {
-                this.salesQtyBoxFieldField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("salesQtyBoxFieldSpecified")]
-        public bool salesQtyBoxFieldSpecified1 {
-            get {
-                return this.salesQtyBoxFieldSpecified1Field;
-            }
-            set {
-                this.salesQtyBoxFieldSpecified1Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        public decimal salesQtyField {
-            get {
-                return this.salesQtyFieldField;
-            }
-            set {
-                this.salesQtyFieldField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("salesQtyFieldSpecified")]
-        public bool salesQtyFieldSpecified1 {
-            get {
-                return this.salesQtyFieldSpecified1Field;
-            }
-            set {
-                this.salesQtyFieldSpecified1Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        public decimal salesQtyPalletField {
-            get {
-                return this.salesQtyPalletFieldField;
-            }
-            set {
-                this.salesQtyPalletFieldField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("salesQtyPalletFieldSpecified")]
-        public bool salesQtyPalletFieldSpecified1 {
-            get {
-                return this.salesQtyPalletFieldSpecified1Field;
-            }
-            set {
-                this.salesQtyPalletFieldSpecified1Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        public decimal salesQtySQMField {
-            get {
-                return this.salesQtySQMFieldField;
-            }
-            set {
-                this.salesQtySQMFieldField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("salesQtySQMFieldSpecified")]
-        public bool salesQtySQMFieldSpecified1 {
-            get {
-                return this.salesQtySQMFieldSpecified1Field;
-            }
-            set {
-                this.salesQtySQMFieldSpecified1Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        public decimal salesQtySQMRemainingField {
-            get {
-                return this.salesQtySQMRemainingFieldField;
-            }
-            set {
-                this.salesQtySQMRemainingFieldField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("salesQtySQMRemainingFieldSpecified")]
-        public bool salesQtySQMRemainingFieldSpecified1 {
-            get {
-                return this.salesQtySQMRemainingFieldSpecified1Field;
-            }
-            set {
-                this.salesQtySQMRemainingFieldSpecified1Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        public decimal salesQtySQMReservedField {
-            get {
-                return this.salesQtySQMReservedFieldField;
-            }
-            set {
-                this.salesQtySQMReservedFieldField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("salesQtySQMReservedFieldSpecified")]
-        public bool salesQtySQMReservedFieldSpecified1 {
-            get {
-                return this.salesQtySQMReservedFieldSpecified1Field;
-            }
-            set {
-                this.salesQtySQMReservedFieldSpecified1Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string salesUnitField {
-            get {
-                return this.salesUnitFieldField;
-            }
-            set {
-                this.salesUnitFieldField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string serialField {
-            get {
-                return this.serialFieldField;
-            }
-            set {
-                this.serialFieldField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string shadeField {
-            get {
-                return this.shadeFieldField;
-            }
-            set {
-                this.shadeFieldField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string sizeField {
-            get {
-                return this.sizeFieldField;
-            }
-            set {
-                this.sizeFieldField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string wLocationIdField {
-            get {
-                return this.wLocationIdFieldField;
-            }
-            set {
-                this.wLocationIdFieldField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string warehouseField {
-            get {
-                return this.warehouseFieldField;
-            }
-            set {
-                this.warehouseFieldField = value;
+                this.onGateNumFieldSpecified = value;
             }
         }
     }
@@ -1923,344 +2943,345 @@ namespace SalesDelivery.WebRefSales {
     /// <remarks/>
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
     public partial class FGDeliveryContract : XppObjectBase {
         
-        private string barcode_Code128FieldField;
+        private string barcode_Code128Field;
         
-        private string customerIdFieldField;
+        private string customerIdField;
         
-        private string customerNameFieldField;
+        private string customerNameField;
         
-        private string deliveryAddressFieldField;
+        private string deliveryAddressField;
         
-        private System.DateTime deliveryDateFieldField;
+        private System.DateTime deliveryDateField;
         
-        private bool deliveryDateFieldSpecified1Field;
+        private bool deliveryDateFieldSpecified;
         
-        private FGDeliveryLineContract[] deliveryItemsFieldField;
+        private object[] deliveryItemsField;
         
-        private PickingListStatus deliveryStatusFieldField;
+        private PickingListStatus deliveryStatusField;
         
-        private bool deliveryStatusFieldSpecified1Field;
+        private bool deliveryStatusFieldSpecified;
         
-        private int lineNumFieldField;
+        private int lineNumField;
         
-        private bool lineNumFieldSpecified1Field;
+        private bool lineNumFieldSpecified;
         
-        private string mobileFieldField;
+        private string mobileField;
         
-        private System.DateTime packingSlipGenerateFieldField;
+        private System.DateTime packingSlipGenerateField;
         
-        private bool packingSlipGenerateFieldSpecified1Field;
+        private bool packingSlipGenerateFieldSpecified;
         
-        private string packingSlipNumFieldField;
+        private string packingSlipNumField;
         
-        private string pickingIdFieldField;
+        private string pickingIdField;
         
-        private string quantityInPalletsFieldField;
+        private string quantityInPalletsField;
         
-        private string quantityInSQMFieldField;
+        private string quantityInSQMField;
         
-        private string salesIdFieldField;
+        private string salesIdField;
         
-        private System.DateTime startLoadTruckFieldField;
+        private System.DateTime startLoadTruckField;
         
-        private bool startLoadTruckFieldSpecified1Field;
+        private bool startLoadTruckFieldSpecified;
         
-        private System.DateTime stopLoadTruckFieldField;
+        private System.DateTime stopLoadTruckField;
         
-        private bool stopLoadTruckFieldSpecified1Field;
+        private bool stopLoadTruckFieldSpecified;
         
-        private string ticketFieldField;
+        private string ticketField;
         
-        private string truckDriverFieldField;
+        private string truckDriverField;
         
-        private string truckPlateNumFieldField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string barcode_Code128Field {
-            get {
-                return this.barcode_Code128FieldField;
-            }
-            set {
-                this.barcode_Code128FieldField = value;
-            }
-        }
+        private string truckPlateNumField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string customerIdField {
+        public string Barcode_Code128 {
             get {
-                return this.customerIdFieldField;
+                return this.barcode_Code128Field;
             }
             set {
-                this.customerIdFieldField = value;
+                this.barcode_Code128Field = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string customerNameField {
+        public string CustomerId {
             get {
-                return this.customerNameFieldField;
+                return this.customerIdField;
             }
             set {
-                this.customerNameFieldField = value;
+                this.customerIdField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string deliveryAddressField {
+        public string CustomerName {
             get {
-                return this.deliveryAddressFieldField;
+                return this.customerNameField;
             }
             set {
-                this.deliveryAddressFieldField = value;
+                this.customerNameField = value;
             }
         }
         
         /// <remarks/>
-        public System.DateTime deliveryDateField {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string DeliveryAddress {
             get {
-                return this.deliveryDateFieldField;
+                return this.deliveryAddressField;
             }
             set {
-                this.deliveryDateFieldField = value;
+                this.deliveryAddressField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("deliveryDateFieldSpecified")]
-        public bool deliveryDateFieldSpecified1 {
+        public System.DateTime DeliveryDate {
             get {
-                return this.deliveryDateFieldSpecified1Field;
+                return this.deliveryDateField;
             }
             set {
-                this.deliveryDateFieldSpecified1Field = value;
+                this.deliveryDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DeliveryDateSpecified {
+            get {
+                return this.deliveryDateFieldSpecified;
+            }
+            set {
+                this.deliveryDateFieldSpecified = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
-        public FGDeliveryLineContract[] deliveryItemsField {
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays")]
+        public object[] DeliveryItems {
             get {
-                return this.deliveryItemsFieldField;
+                return this.deliveryItemsField;
             }
             set {
-                this.deliveryItemsFieldField = value;
+                this.deliveryItemsField = value;
             }
         }
         
         /// <remarks/>
-        public PickingListStatus deliveryStatusField {
+        public PickingListStatus DeliveryStatus {
             get {
-                return this.deliveryStatusFieldField;
+                return this.deliveryStatusField;
             }
             set {
-                this.deliveryStatusFieldField = value;
+                this.deliveryStatusField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("deliveryStatusFieldSpecified")]
-        public bool deliveryStatusFieldSpecified1 {
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DeliveryStatusSpecified {
             get {
-                return this.deliveryStatusFieldSpecified1Field;
+                return this.deliveryStatusFieldSpecified;
             }
             set {
-                this.deliveryStatusFieldSpecified1Field = value;
+                this.deliveryStatusFieldSpecified = value;
             }
         }
         
         /// <remarks/>
-        public int lineNumField {
+        public int LineNum {
             get {
-                return this.lineNumFieldField;
+                return this.lineNumField;
             }
             set {
-                this.lineNumFieldField = value;
+                this.lineNumField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("lineNumFieldSpecified")]
-        public bool lineNumFieldSpecified1 {
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool LineNumSpecified {
             get {
-                return this.lineNumFieldSpecified1Field;
+                return this.lineNumFieldSpecified;
             }
             set {
-                this.lineNumFieldSpecified1Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string mobileField {
-            get {
-                return this.mobileFieldField;
-            }
-            set {
-                this.mobileFieldField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public System.DateTime packingSlipGenerateField {
-            get {
-                return this.packingSlipGenerateFieldField;
-            }
-            set {
-                this.packingSlipGenerateFieldField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("packingSlipGenerateFieldSpecified")]
-        public bool packingSlipGenerateFieldSpecified1 {
-            get {
-                return this.packingSlipGenerateFieldSpecified1Field;
-            }
-            set {
-                this.packingSlipGenerateFieldSpecified1Field = value;
+                this.lineNumFieldSpecified = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string packingSlipNumField {
+        public string Mobile {
             get {
-                return this.packingSlipNumFieldField;
+                return this.mobileField;
             }
             set {
-                this.packingSlipNumFieldField = value;
+                this.mobileField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime PackingSlipGenerate {
+            get {
+                return this.packingSlipGenerateField;
+            }
+            set {
+                this.packingSlipGenerateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool PackingSlipGenerateSpecified {
+            get {
+                return this.packingSlipGenerateFieldSpecified;
+            }
+            set {
+                this.packingSlipGenerateFieldSpecified = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string pickingIdField {
+        public string PackingSlipNum {
             get {
-                return this.pickingIdFieldField;
+                return this.packingSlipNumField;
             }
             set {
-                this.pickingIdFieldField = value;
+                this.packingSlipNumField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string quantityInPalletsField {
+        public string PickingId {
             get {
-                return this.quantityInPalletsFieldField;
+                return this.pickingIdField;
             }
             set {
-                this.quantityInPalletsFieldField = value;
+                this.pickingIdField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string quantityInSQMField {
+        public string QuantityInPallets {
             get {
-                return this.quantityInSQMFieldField;
+                return this.quantityInPalletsField;
             }
             set {
-                this.quantityInSQMFieldField = value;
+                this.quantityInPalletsField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string salesIdField {
+        public string QuantityInSQM {
             get {
-                return this.salesIdFieldField;
+                return this.quantityInSQMField;
             }
             set {
-                this.salesIdFieldField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public System.DateTime startLoadTruckField {
-            get {
-                return this.startLoadTruckFieldField;
-            }
-            set {
-                this.startLoadTruckFieldField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("startLoadTruckFieldSpecified")]
-        public bool startLoadTruckFieldSpecified1 {
-            get {
-                return this.startLoadTruckFieldSpecified1Field;
-            }
-            set {
-                this.startLoadTruckFieldSpecified1Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        public System.DateTime stopLoadTruckField {
-            get {
-                return this.stopLoadTruckFieldField;
-            }
-            set {
-                this.stopLoadTruckFieldField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("stopLoadTruckFieldSpecified")]
-        public bool stopLoadTruckFieldSpecified1 {
-            get {
-                return this.stopLoadTruckFieldSpecified1Field;
-            }
-            set {
-                this.stopLoadTruckFieldSpecified1Field = value;
+                this.quantityInSQMField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string ticketField {
+        public string SalesId {
             get {
-                return this.ticketFieldField;
+                return this.salesIdField;
             }
             set {
-                this.ticketFieldField = value;
+                this.salesIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime StartLoadTruck {
+            get {
+                return this.startLoadTruckField;
+            }
+            set {
+                this.startLoadTruckField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool StartLoadTruckSpecified {
+            get {
+                return this.startLoadTruckFieldSpecified;
+            }
+            set {
+                this.startLoadTruckFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime StopLoadTruck {
+            get {
+                return this.stopLoadTruckField;
+            }
+            set {
+                this.stopLoadTruckField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool StopLoadTruckSpecified {
+            get {
+                return this.stopLoadTruckFieldSpecified;
+            }
+            set {
+                this.stopLoadTruckFieldSpecified = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string truckDriverField {
+        public string Ticket {
             get {
-                return this.truckDriverFieldField;
+                return this.ticketField;
             }
             set {
-                this.truckDriverFieldField = value;
+                this.ticketField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string truckPlateNumField {
+        public string TruckDriver {
             get {
-                return this.truckPlateNumFieldField;
+                return this.truckDriverField;
             }
             set {
-                this.truckPlateNumFieldField = value;
+                this.truckDriverField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string TruckPlateNum {
+            get {
+                return this.truckPlateNumField;
+            }
+            set {
+                this.truckPlateNumField = value;
             }
         }
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
     public enum PickingListStatus {
         
         /// <remarks/>
@@ -2276,165 +3297,95 @@ namespace SalesDelivery.WebRefSales {
     /// <remarks/>
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")]
-    public partial class FGLineContract : XppObjectBase {
-        
-        private string fGLineNameFieldField;
-        
-        private int fGLineNumberFieldField;
-        
-        private bool fGLineNumberFieldSpecified1Field;
-        
-        private int onGateNumFieldField;
-        
-        private bool onGateNumFieldSpecified1Field;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string fGLineNameField {
-            get {
-                return this.fGLineNameFieldField;
-            }
-            set {
-                this.fGLineNameFieldField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int fGLineNumberField {
-            get {
-                return this.fGLineNumberFieldField;
-            }
-            set {
-                this.fGLineNumberFieldField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("fGLineNumberFieldSpecified")]
-        public bool fGLineNumberFieldSpecified1 {
-            get {
-                return this.fGLineNumberFieldSpecified1Field;
-            }
-            set {
-                this.fGLineNumberFieldSpecified1Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int onGateNumField {
-            get {
-                return this.onGateNumFieldField;
-            }
-            set {
-                this.onGateNumFieldField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("onGateNumFieldSpecified")]
-        public bool onGateNumFieldSpecified1 {
-            get {
-                return this.onGateNumFieldSpecified1Field;
-            }
-            set {
-                this.onGateNumFieldSpecified1Field = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
     public partial class CustomerDeliveryContract : XppObjectBase {
         
-        private string customerAccountFieldField;
+        private string customerAccountField;
         
-        private string customerNameFieldField;
+        private string customerNameField;
         
-        private string packingSlipNumFieldField;
+        private string packingSlipNumField;
         
-        private decimal quantityFieldField;
+        private decimal quantityField;
         
-        private bool quantityFieldSpecified1Field;
+        private bool quantityFieldSpecified;
         
-        private int trucksFieldField;
+        private int trucksField;
         
-        private bool trucksFieldSpecified1Field;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string customerAccountField {
-            get {
-                return this.customerAccountFieldField;
-            }
-            set {
-                this.customerAccountFieldField = value;
-            }
-        }
+        private bool trucksFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string customerNameField {
+        public string CustomerAccount {
             get {
-                return this.customerNameFieldField;
+                return this.customerAccountField;
             }
             set {
-                this.customerNameFieldField = value;
+                this.customerAccountField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string packingSlipNumField {
+        public string CustomerName {
             get {
-                return this.packingSlipNumFieldField;
+                return this.customerNameField;
             }
             set {
-                this.packingSlipNumFieldField = value;
+                this.customerNameField = value;
             }
         }
         
         /// <remarks/>
-        public decimal quantityField {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string PackingSlipNum {
             get {
-                return this.quantityFieldField;
+                return this.packingSlipNumField;
             }
             set {
-                this.quantityFieldField = value;
+                this.packingSlipNumField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("quantityFieldSpecified")]
-        public bool quantityFieldSpecified1 {
+        public decimal Quantity {
             get {
-                return this.quantityFieldSpecified1Field;
+                return this.quantityField;
             }
             set {
-                this.quantityFieldSpecified1Field = value;
+                this.quantityField = value;
             }
         }
         
         /// <remarks/>
-        public int trucksField {
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool QuantitySpecified {
             get {
-                return this.trucksFieldField;
+                return this.quantityFieldSpecified;
             }
             set {
-                this.trucksFieldField = value;
+                this.quantityFieldSpecified = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("trucksFieldSpecified")]
-        public bool trucksFieldSpecified1 {
+        public int Trucks {
             get {
-                return this.trucksFieldSpecified1Field;
+                return this.trucksField;
             }
             set {
-                this.trucksFieldSpecified1Field = value;
+                this.trucksField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool TrucksSpecified {
+            get {
+                return this.trucksFieldSpecified;
+            }
+            set {
+                this.trucksFieldSpecified = value;
             }
         }
     }
@@ -2442,57 +3393,57 @@ namespace SalesDelivery.WebRefSales {
     /// <remarks/>
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/Dynamics.AX.Application")]
     public partial class PalletItemContract : XppObjectBase {
         
-        private string serialFieldField;
+        private string serialField;
         
-        private string updatedByFieldField;
+        private string updatedByField;
         
-        private System.DateTime updatedDateFieldField;
+        private System.DateTime updatedDateField;
         
-        private bool updatedDateFieldSpecified1Field;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string serialField {
-            get {
-                return this.serialFieldField;
-            }
-            set {
-                this.serialFieldField = value;
-            }
-        }
+        private bool updatedDateFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string updatedByField {
+        public string Serial {
             get {
-                return this.updatedByFieldField;
+                return this.serialField;
             }
             set {
-                this.updatedByFieldField = value;
+                this.serialField = value;
             }
         }
         
         /// <remarks/>
-        public System.DateTime updatedDateField {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string UpdatedBy {
             get {
-                return this.updatedDateFieldField;
+                return this.updatedByField;
             }
             set {
-                this.updatedDateFieldField = value;
+                this.updatedByField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("updatedDateFieldSpecified")]
-        public bool updatedDateFieldSpecified1 {
+        public System.DateTime UpdatedDate {
             get {
-                return this.updatedDateFieldSpecified1Field;
+                return this.updatedDateField;
             }
             set {
-                this.updatedDateFieldSpecified1Field = value;
+                this.updatedDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool UpdatedDateSpecified {
+            get {
+                return this.updatedDateFieldSpecified;
+            }
+            set {
+                this.updatedDateFieldSpecified = value;
             }
         }
     }

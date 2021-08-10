@@ -490,15 +490,15 @@ namespace SalesDelivery
                     {
                         PalletItemContract palletItem = new PalletItemContract();
                         string palletNum = item.SubItems[0].Text.Trim();
-                        palletItem.serialField = palletNum;
+                        palletItem.Serial = palletNum;
                         try
                         {
-                            palletItem.updatedDateField = DateTime.Parse(item.SubItems[7].Text.Trim());
+                            palletItem.UpdatedDate = DateTime.Parse(item.SubItems[7].Text.Trim());
                         }
-                        catch { palletItem.updatedDateField = DateTime.Now; }
+                        catch { palletItem.UpdatedDate = DateTime.Now; }
 
-                        palletItem.updatedDateFieldSpecified1 = true;
-                        palletItem.updatedByField = AppVariables.UpdatedBy;
+                        //palletItem.updatedDateFieldSpecified1 = true;
+                        palletItem.UpdatedBy = AppVariables.UpdatedBy;
                         serials.Add(palletItem);
                     }
                 }
