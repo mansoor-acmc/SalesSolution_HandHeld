@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesDelivery", "SalesDelivery\SalesDelivery.csproj", "{EFDB7FF6-3974-4098-9F38-3115DCC66997}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesDeliveryCE7", "SalesDeliveryCE7\SalesDeliveryCE7.csproj", "{A137BDE0-B219-4509-8BFA-C87205F8AA92}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Description = Developer version of Sales Solution
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFDB7FF6-3974-4098-9F38-3115DCC66997}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFDB7FF6-3974-4098-9F38-3115DCC66997}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFDB7FF6-3974-4098-9F38-3115DCC66997}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{EFDB7FF6-3974-4098-9F38-3115DCC66997}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFDB7FF6-3974-4098-9F38-3115DCC66997}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFDB7FF6-3974-4098-9F38-3115DCC66997}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A137BDE0-B219-4509-8BFA-C87205F8AA92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A137BDE0-B219-4509-8BFA-C87205F8AA92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A137BDE0-B219-4509-8BFA-C87205F8AA92}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A137BDE0-B219-4509-8BFA-C87205F8AA92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

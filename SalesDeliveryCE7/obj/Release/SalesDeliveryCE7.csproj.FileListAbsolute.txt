@@ -1,0 +1,30 @@
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDeliveryCE7\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDeliveryCE7\obj\Release\SalesDeliveryCE7.Forms.About.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDeliveryCE7\obj\Release\SalesDeliveryCE7.ChangePassword.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDeliveryCE7\obj\Release\SalesDeliveryCE7.Login.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDeliveryCE7\obj\Release\SalesDeliveryCE7.SalesOrder.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDeliveryCE7\obj\Release\SalesDeliveryCE7.ScanPallet.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDeliveryCE7\obj\Release\SalesDeliveryCE7.Settings.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDeliveryCE7\obj\Release\SalesDeliveryCE7.ViewReserved.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDeliveryCE7\obj\Release\SalesDeliveryCE7.Properties.Resources.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDeliveryCE7\obj\Release\SalesDeliveryCE7.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDeliveryCE7\bin\Release\SalesDeliveryCE7.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDeliveryCE7\bin\Release\SalesDeliveryCE7.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDeliveryCE7\bin\Release\System.Data.SqlServerCe.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDeliveryCE7\obj\Release\SalesDeliveryCE7.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDeliveryCE7\obj\Release\SalesDeliveryCE7.pdb
+C:\Projects\SalesSolution\Developer\SalesDeliveryCE7\obj\Release\ResolveAssemblyReference.cache
+C:\Projects\SalesSolution\Developer\SalesDeliveryCE7\obj\Release\SalesDeliveryCE7.Forms.About.resources
+C:\Projects\SalesSolution\Developer\SalesDeliveryCE7\obj\Release\SalesDeliveryCE7.ChangePassword.resources
+C:\Projects\SalesSolution\Developer\SalesDeliveryCE7\obj\Release\SalesDeliveryCE7.Login.resources
+C:\Projects\SalesSolution\Developer\SalesDeliveryCE7\obj\Release\SalesDeliveryCE7.SalesOrder.resources
+C:\Projects\SalesSolution\Developer\SalesDeliveryCE7\obj\Release\SalesDeliveryCE7.ScanPallet.resources
+C:\Projects\SalesSolution\Developer\SalesDeliveryCE7\obj\Release\SalesDeliveryCE7.Settings.resources
+C:\Projects\SalesSolution\Developer\SalesDeliveryCE7\obj\Release\SalesDeliveryCE7.ViewReserved.resources
+C:\Projects\SalesSolution\Developer\SalesDeliveryCE7\obj\Release\SalesDeliveryCE7.Properties.Resources.resources
+C:\Projects\SalesSolution\Developer\SalesDeliveryCE7\obj\Release\SalesDeliveryCE7.csproj.GenerateResource.Cache
+C:\Projects\SalesSolution\Developer\SalesDeliveryCE7\obj\Release\SalesDeliveryCE7.exe
+C:\Projects\SalesSolution\Developer\SalesDeliveryCE7\bin\Release\SalesDeliveryCE7.exe
+C:\Projects\SalesSolution\Developer\SalesDeliveryCE7\bin\Release\SalesDeliveryCE7.pdb
+C:\Projects\SalesSolution\Developer\SalesDeliveryCE7\bin\Release\System.Data.SqlServerCe.dll
+C:\Projects\SalesSolution\Developer\SalesDeliveryCE7\obj\Release\SalesDeliveryCE7.pdb

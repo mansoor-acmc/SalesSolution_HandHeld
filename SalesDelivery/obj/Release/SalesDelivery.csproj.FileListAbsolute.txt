@@ -1,0 +1,42 @@
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDelivery\bin\Release\SalesDelivery.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDelivery\bin\Release\SalesDelivery.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDelivery\bin\Release\Microsoft.WindowsMobile.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDelivery\bin\Release\Microsoft.WindowsMobile.Status.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDelivery\bin\Release\System.Data.SqlServerCe.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDelivery\bin\Release\Microsoft.WindowsMobile.PocketOutlook.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDelivery\bin\Release\Microsoft.WindowsMobile.xml
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDelivery\bin\Release\Microsoft.WindowsMobile.Status.xml
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDelivery\bin\Release\Microsoft.WindowsMobile.PocketOutlook.xml
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDelivery\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDelivery\obj\Release\SalesDelivery.ChangePassword.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDelivery\obj\Release\SalesDelivery.Login.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDelivery\obj\Release\SalesDelivery.ScanPallet.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDelivery\obj\Release\SalesDelivery.Settings.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDelivery\obj\Release\SalesDelivery.ViewReserved.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDelivery\obj\Release\SalesDelivery.Properties.Resources.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDelivery\obj\Release\SalesDelivery.SalesOrder.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDelivery\obj\Release\SalesDelivery.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDelivery\obj\Release\SalesDelivery.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDelivery\obj\Release\SalesDelivery.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\SalesSolution\Developer\SalesDelivery\obj\Release\SalesDelivery.Forms.About.resources
+C:\Projects\SalesSolution\Developer\SalesDelivery\bin\Release\SalesDelivery.exe
+C:\Projects\SalesSolution\Developer\SalesDelivery\bin\Release\SalesDelivery.pdb
+C:\Projects\SalesSolution\Developer\SalesDelivery\bin\Release\Microsoft.WindowsMobile.dll
+C:\Projects\SalesSolution\Developer\SalesDelivery\bin\Release\Microsoft.WindowsMobile.Status.dll
+C:\Projects\SalesSolution\Developer\SalesDelivery\bin\Release\System.Data.SqlServerCe.dll
+C:\Projects\SalesSolution\Developer\SalesDelivery\bin\Release\Microsoft.WindowsMobile.PocketOutlook.dll
+C:\Projects\SalesSolution\Developer\SalesDelivery\bin\Release\Microsoft.WindowsMobile.xml
+C:\Projects\SalesSolution\Developer\SalesDelivery\bin\Release\Microsoft.WindowsMobile.Status.xml
+C:\Projects\SalesSolution\Developer\SalesDelivery\bin\Release\Microsoft.WindowsMobile.PocketOutlook.xml
+C:\Projects\SalesSolution\Developer\SalesDelivery\obj\Release\ResolveAssemblyReference.cache
+C:\Projects\SalesSolution\Developer\SalesDelivery\obj\Release\SalesDelivery.Forms.About.resources
+C:\Projects\SalesSolution\Developer\SalesDelivery\obj\Release\SalesDelivery.ChangePassword.resources
+C:\Projects\SalesSolution\Developer\SalesDelivery\obj\Release\SalesDelivery.Login.resources
+C:\Projects\SalesSolution\Developer\SalesDelivery\obj\Release\SalesDelivery.ScanPallet.resources
+C:\Projects\SalesSolution\Developer\SalesDelivery\obj\Release\SalesDelivery.Settings.resources
+C:\Projects\SalesSolution\Developer\SalesDelivery\obj\Release\SalesDelivery.ViewReserved.resources
+C:\Projects\SalesSolution\Developer\SalesDelivery\obj\Release\SalesDelivery.Properties.Resources.resources
+C:\Projects\SalesSolution\Developer\SalesDelivery\obj\Release\SalesDelivery.SalesOrder.resources
+C:\Projects\SalesSolution\Developer\SalesDelivery\obj\Release\SalesDelivery.csproj.GenerateResource.Cache
+C:\Projects\SalesSolution\Developer\SalesDelivery\obj\Release\SalesDelivery.exe
+C:\Projects\SalesSolution\Developer\SalesDelivery\obj\Release\SalesDelivery.pdb

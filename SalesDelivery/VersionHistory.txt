@@ -1,0 +1,23 @@
+﻿Version 2.6.0.0:
+On the About form now also shows the Database Size.
+
+Version 2.6.5.0:
+At the startup of an application Shrinking of Database is done.
+Change of DataBase file path.
+
+Version 2.7.0.0:
+On the Login form you can click and see the About form.
+
+Version 2.7.5.0:
+Upgrade Dynamics AX version to 6.3 CU12 
+
+Version 2.7.5.1:
+Add Receive Picking List Button, On-Hand button, Location name on lines, change in fields design, Form Title
+
+Version 2.7.6.0:
+Add Ticket#, Truck Line#. Allow to change Truck Line #. Add Shade Column, Auto change password from WCF service
+
+Version 2.7.7.0:
+Add option to auto Pick-Pack and then creates Delivery Note (Packing Slip) from backend (by WCF services).
+Add Packing-slip label on Home screen, Change Pickinglist Font color.
+Change column ordering in the Sales Line grids.
